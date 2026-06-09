@@ -1,213 +1,176 @@
-# Signature-Verification-System
-✒️ Signature Verification System
-🔍 Deep Learning (Siamese Network) + Flask + Modern UI
-A powerful Signature Verification System that uses a Siamese Neural Network to determine whether two signatures belong to the same person.
-Built with Flask, TensorFlow/Keras, and a modern UI for seamless user experience.
+# 🛡️ SignaTrust AI: Smart Signature Authentication Platform
 
-🌟 Features
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue.svg">
+  <img src="https://img.shields.io/badge/Flask-Web%20Framework-green.svg">
+  <img src="https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange.svg">
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg">
+</p>
 
-🧠 Deep Learning model (Siamese Network + Contrastive Loss)
+## 📌 Overview
 
-🖥️ Flask backend API for real-time verification
+**SignaTrust AI** is an intelligent signature authentication platform that leverages Deep Learning to verify the authenticity of handwritten signatures. The system uses a Siamese Neural Network architecture to learn signature similarity patterns and determine whether two signatures belong to the same individual.
 
-📸 Upload two signatures and get similarity result
+## 🚀 Key Features
 
-📊 Animated similarity progress bar
+- 🤖 AI-Powered Signature Authentication
+- 🔒 Real-Time Signature Verification
+- 📊 Interactive Similarity Score Dashboard
+- 🌐 Flask-Based Web Application
+- 🧩 Custom Dataset Support
+- 🎨 Modern Responsive UI
 
-🔍 Clear output:
+## 🏗️ System Architecture
 
-✔️ Signatures Match
-
-❌ Signatures Do Not Match
-
-📁 Custom dataset support
-
-🧪 Easy model training
-
-🎨 Beautiful, responsive UI
-
-📂 Project Structure
+```text
+User Upload
+      │
+      ▼
+Image Preprocessing
+      │
+      ▼
+Feature Extraction
+      │
+      ▼
+Siamese Neural Network
+      │
+      ▼
+Similarity Computation
+      │
+      ▼
+Verification Result
 ```
-signature-verification/
+
+## 📂 Project Structure
+
+```text
+SignaTrust-AI/
 │
-├── app.py                   # Flask backend
-├── model_training.py        # Siamese model training
+├── app.py
+├── model_training.py
+├── requirements.txt
+├── README.md
 │
 ├── model/
-│   └── signature_model.h5   # Saved model
+│   └── signature_model.h5
 │
 ├── dataset/
 │   ├── person1/
 │   │   ├── genuine/
 │   │   └── forged/
-│   ├── person2/
-│       ├── genuine/
-│       └── forged/
 │
 ├── templates/
-│   └── index.html           # Frontend UI
+│   └── index.html
 │
-├── static/                  # CSS / JS, assets
-│
-├── requirements.txt
-└── README.md
-```
-🧰 Tech Stack
-
-```
-Backend
-
-Python
-
-Flask
-
-TensorFlow / Keras
-
-NumPy
-
-Pillow
-
-Frontend
-
-HTML5
-
-CSS3
-
-Bootstrap 5
-
-JavaScript (Fetch API)
+└── static/
+    ├── script.js
+    └── style.css
 ```
 
-⚙️ Installation
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/signature-verification.git
-cd signature-verification
+## 🛠️ Technology Stack
 
-2️⃣ Create Virtual Environment
-```
+### Backend
+- Python
+- Flask
+- TensorFlow
+- Keras
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+- Bootstrap
+
+### Machine Learning
+- Siamese Neural Network
+- Contrastive Loss
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/yourusername/SignaTrust-AI.git
+cd SignaTrust-AI
+
 python -m venv venv
-
-
-Activate:
-
-Windows
-
 venv\Scripts\activate
 
-```
-```
-Mac/Linux
-
-source venv/bin/activate
-```
-3️⃣ Install Dependencies
-```
 pip install -r requirements.txt
 ```
-📁 Dataset Format
-```
-dataset/
-├── person1/
-│   ├── genuine/
-│   └── forged/
-├── person2/
-    ├── genuine/
-    └── forged/
 
-```
-Each folder contains multiple signature images.
+## 🧠 Train the Model
 
-🧠 Train the Model
-
-Run:
-```
+```bash
 python model_training.py
-
 ```
-This will:
 
-✔ Load dataset
-✔ Train Siamese Network
-✔ Save model to:
+## ▶️ Run the Application
 
-model/signature_model.h5
-
-▶️ Run the Flask App
-
-```
+```bash
 python app.py
 ```
 
-Then open in browser:
+Open:
 
-👉 http://127.0.0.1:5000/
+```text
+http://127.0.0.1:5000
+```
 
-🖼️ How It Works
+## 📊 API Endpoint
 
-User uploads 2 signatures
+### POST /verify
 
-Images are preprocessed:
+Request:
+- signature1 (file)
+- signature2 (file)
 
-Grayscale
+Response:
 
-Resized to 150×150
-
-Normalized
-
-Siamese Network predicts similarity
-
-UI displays:
-
-Percentage match
-
-Result message
-
-📊 Threshold System
-THRESHOLD = 0.6
-
-
-score > 0.6 → Match
-
-score ≤ 0.6 → Not a Match
-
-Adjust based on dataset quality.
-
-📡 API Endpoint
-POST /verify
-
-Request
-
-signature1 (file)
-
-signature2 (file)
-
-Response
-
+```json
 {
-  "message": "Similarity score: 0.82 (Signatures match!)"
+  "message": "Similarity Score: 0.82 (Authentic Signature)"
 }
+```
 
-🔮 Future Enhancements
+## 📸 Screenshots
 
-📱 Mobile-friendly UI
+### 🏠 Home Dashboard
 
-🗄 Database to store signature history
+<p align="center">
+  <img src=""C:\Users\SARAS\Pictures\Screenshots\dashboard.png"" alt="Home Dashboard" width="900">
+</p>
 
-🔧 Auto-denoise / thresholding
+### 🔍 Verification Analysis
 
-🌐 Cloud-hosted version
+<p align="center">
+  <img src=""C:\Users\SARAS\Pictures\Screenshots\verification-result.png"" alt="Verification Analysis" width="900">
+</p>
 
-🖥 Dashboard for multiple signature comparison
+## 🎯 Applications
 
-📝 License
+- Banking Authentication
+- Document Verification
+- Financial Security
+- Identity Verification
+- Enterprise Authentication
+
+## 🔮 Future Enhancements
+
+- Explainable AI Visualizations
+- Verification History Dashboard
+- PDF Reports
+- Cloud Deployment
+- Mobile Application
+
+## 👨‍💻 Author
+
+**Saras Ugale**
+
+AI/ML Engineer | Machine Learning Enthusiast
+
+## ⭐ Support
+
+If you found this project useful, please consider giving it a star ⭐ on GitHub.
+
+## 📄 License
 
 This project is licensed under the MIT License.
-
-👨‍💻 Author
-
-Saras Ugale
-Signature Verification — Deep Learning + Flask
-
-⭐ Like the Project?
-
-If this project helped you, consider giving it a star ⭐ on GitHub!
