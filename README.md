@@ -133,18 +133,19 @@ Response:
 
 ## 📸 Screenshots
 
-### 🏠 Home Dashboard
+<table>
+<tr>
+<td align="center">
+<b>Upload Interface</b><br>
+<img src="Signature_Verfication/screenshots/dashboard.png" width="450">
+</td>
 
-<p align="center">
-  <img src=""C:\Users\SARAS\Pictures\Screenshots\dashboard.png"" alt="Home Dashboard" width="900">
-</p>
-
-### 🔍 Verification Analysis
-
-<p align="center">
-  <img src=""C:\Users\SARAS\Pictures\Screenshots\verification-result.png"" alt="Verification Analysis" width="900">
-</p>
-
+<td align="center">
+<b>Verification Result</b><br>
+<img src="Signature_Verfication/screenshots/verification-result.png" width="450">
+</td>
+</tr>
+</table>
 ## 🎯 Applications
 
 - Banking Authentication
